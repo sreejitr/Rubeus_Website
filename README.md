@@ -2,8 +2,8 @@ Rubeus_Website
 ==============
 
 A simple buying and selling website (Ruby on Rails)
-
-== Welcome to Rails
+Ruby version 1.9.3
+Rails version 3.2.14
 
 Rails is a web-application framework that includes everything needed to create
 database-backed web applications according to the Model-View-Control pattern.
