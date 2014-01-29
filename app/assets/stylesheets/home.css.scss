@@ -1,0 +1,105 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+
+}
+
+.container {
+  background-color: #ffffff;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+body {
+  padding-top: 60px;
+  background: url(/assets/Pitts.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.hero-unit {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-unit .bg {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(/assets/BuySell1.png);
+  opacity: 0.3;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: horizontal;
+}
+
+.center {
+  text-align: center;
+  h1{
+    margin-bottom: 10px
+  }
+}
+
+/* header */
+
+header {
+  #logo {
+    float: left;
+    font-size: 1.8em;
+    margin-right: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    padding-left: 10px;
+    color: #000000;
+  }
+}
+
+.carousel-inner{
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 500px;
+    min-height: 500px;
+  }
+}
+
+.carousel-caption{
+  p{
+    font-size: large;
+  }
+}
+
+.rcontrols {
+width: 400px;
+}
+
+#messages{
+  min-height: 500px;
+  p{
+    text-align: left;
+    font-size: large;
+    color: #a0a0a0
+  }
+}
+
+.display_font {
+  font-size: 22px;
+  font-style: italic;
+}

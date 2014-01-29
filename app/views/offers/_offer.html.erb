@@ -1,0 +1,10 @@
+<li>
+  <span class="offer">
+    Offer extended by <%= link_to User.find_by_id(offer.buyer_id).email, user_path(buyer_id) %>
+  </span>
+  <span class="timestamp">
+    Posted <abbr class="timeago" title="<%= offer.created_at.getutc.iso8601 %>">
+    <%= offer.created_at.to_s %>
+  </abbr> ago.
+  </span>
+</li>

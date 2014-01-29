@@ -1,0 +1,37 @@
+<%- model_class = Offer -%>
+<h2>Offers</h2>
+<% offers = product.offers %>
+<% if offers.empty?%>
+    <p class="display_font">No offers yet. Please be patient.</p>
+<%else%>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th class="display_font"> <%= model_class.human_attribute_name('Buyer') %></th>
+  </tr>
+  </thead>
+<tbody>
+    <% offers.each do |o| %>
+    <%  user = o.user %>
+
+  <tr>
+      <div class="offer">
+        <td class="display_font"><%= link_to user.name, user_path(user) %></td>
+        <td>
+          <!--Find a way to remove if else from the htmls. They are growing in numbers day by day :(-->
+        <% if product.status == Rubeus::SOLD%>
+            <%=Rubeus::SOLD%>
+        <% else %>
+            <%= link_to t(Rubeus::ACCEPT, :default => t("helpers.links.Accept")),
+              accept_offer_path(o), :method => 'get', :class => 'btn btn-primary btn-mini' %>
+        <%end%>
+          <%= link_to t(Rubeus::SEND_MESSAGE),
+                      new_user_message_path(user, :recipient_id => user.id), :method => 'get', :class => 'btn btn-primary btn-mini' %>
+        </td>
+      </div>
+  </tr>
+  <%end%>
+</tbody>
+</table>
+<% end %>

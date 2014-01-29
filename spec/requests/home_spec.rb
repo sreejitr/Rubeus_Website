@@ -1,0 +1,1 @@
+#Make sure that Devise is integrated properly (i.e., have a test for the sign_out problem)

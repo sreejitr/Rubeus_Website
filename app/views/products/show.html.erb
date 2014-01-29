@@ -1,0 +1,40 @@
+<%- model_class = Product -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => @product.title.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:category) %>:</strong></dt>
+  <dd><%= @product.category %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:condition) %>:</strong></dt>
+  <dd><%= @product.condition %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
+  <dd><%= number_to_currency(@product.price) %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @product.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:photo) %>:</strong></dt>
+  <dd><%= image_tag @product.photo_url(:medium) %></dd>
+
+<% if @is_signed_in_user_the_owner %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              products_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_product_path(@product), :class => 'btn'%>
+  <%= link_to t('.destroy', :default => t("helpers.links.delete")),
+              product_path(@product),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+
+  <%= render "offers/offers_for_me", :product => @product %>
+</div>
+</dl>
+<%elsif @product.status != Rubeus::SOLD %>
+    <%= link_to t('.Show Interest!', :default => t("helpers.links.Show Interest!")),
+                new_offer_path(:product_id => @product.id), :method => 'get', :class => 'btn btn-primary btn-mini'  %>
+      <p>* Offers for only owned products are displayed.</p>
+
+<%end%>
+
+</div>

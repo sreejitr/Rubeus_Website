@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>module ApplicationHelper - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/application_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-categories">#categories</a>
+    
+    <li><a href="#method-i-conditions">#conditions</a>
+    
+    <li><a href="#method-i-status">#status</a>
+    
+    <li><a href="#method-i-us_states">#us_states</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./Message.html">Message</a>
+  
+    <li><a href="./MessagesController.html">MessagesController</a>
+  
+    <li><a href="./Offer.html">Offer</a>
+  
+    <li><a href="./OffersController.html">OffersController</a>
+  
+    <li><a href="./OffersHelper.html">OffersHelper</a>
+  
+    <li><a href="./Product.html">Product</a>
+  
+    <li><a href="./ProductImageUploader.html">ProductImageUploader</a>
+  
+    <li><a href="./ProductsController.html">ProductsController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module ApplicationHelper</h1>
+
+  <div id="description" class="description">
+    
+<p>Common methods used throughout the application</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-categories" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">categories</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>categories of products</p>
+          
+
+          
+          <div class="method-source-code" id="categories-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">categories</span>
+  [<span class="ruby-string">'Furniture'</span>, <span class="ruby-string">'Electronics'</span>, <span class="ruby-string">'Computers'</span>, <span class="ruby-string">'Clothing &amp; Shoes'</span>, <span class="ruby-string">'Household'</span>, <span class="ruby-string">'Books'</span>, <span class="ruby-string">'Misc'</span>, <span class="ruby-string">'Sports'</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- categories-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- categories-method -->
+
+    
+      <div id="method-i-conditions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">conditions</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>conditions of products</p>
+          
+
+          
+          <div class="method-source-code" id="conditions-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">conditions</span>
+  [<span class="ruby-string">'New'</span>, <span class="ruby-string">'Good'</span>, <span class="ruby-string">'Fair'</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- conditions-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- conditions-method -->
+
+    
+      <div id="method-i-status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">status</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>status of products sold or not</p>
+          
+
+          
+          <div class="method-source-code" id="status-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">status</span>
+  [
+      [<span class="ruby-string">'For Sale'</span>, <span class="ruby-constant">Rubeus</span><span class="ruby-operator">::</span><span class="ruby-constant">FOR_SALE</span>],
+      [<span class="ruby-string">'Not for Sale'</span>, <span class="ruby-constant">Rubeus</span><span class="ruby-operator">::</span><span class="ruby-constant">NOT_FOR_SALE</span> ]
+  ]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- status-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- status-method -->
+
+    
+      <div id="method-i-us_states" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">us_states</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>List all the states within United States. This will be referenced by create
+product/users profile page</p>
+          
+
+          
+          <div class="method-source-code" id="us_states-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">us_states</span>
+  [
+      [<span class="ruby-string">'Alabama'</span>, <span class="ruby-string">'AL'</span>],
+      [<span class="ruby-string">'Alaska'</span>, <span class="ruby-string">'AK'</span>],
+      [<span class="ruby-string">'Arizona'</span>, <span class="ruby-string">'AZ'</span>],
+      [<span class="ruby-string">'Arkansas'</span>, <span class="ruby-string">'AR'</span>],
+      [<span class="ruby-string">'California'</span>, <span class="ruby-string">'CA'</span>],
+      [<span class="ruby-string">'Colorado'</span>, <span class="ruby-string">'CO'</span>],
+      [<span class="ruby-string">'Connecticut'</span>, <span class="ruby-string">'CT'</span>],
+      [<span class="ruby-string">'Delaware'</span>, <span class="ruby-string">'DE'</span>],
+      [<span class="ruby-string">'District of Columbia'</span>, <span class="ruby-string">'DC'</span>],
+      [<span class="ruby-string">'Florida'</span>, <span class="ruby-string">'FL'</span>],
+      [<span class="ruby-string">'Georgia'</span>, <span class="ruby-string">'GA'</span>],
+      [<span class="ruby-string">'Hawaii'</span>, <span class="ruby-string">'HI'</span>],
+      [<span class="ruby-string">'Idaho'</span>, <span class="ruby-string">'ID'</span>],
+      [<span class="ruby-string">'Illinois'</span>, <span class="ruby-string">'IL'</span>],
+      [<span class="ruby-string">'Indiana'</span>, <span class="ruby-string">'IN'</span>],
+      [<span class="ruby-string">'Iowa'</span>, <span class="ruby-string">'IA'</span>],
+      [<span class="ruby-string">'Kansas'</span>, <span class="ruby-string">'KS'</span>],
+      [<span class="ruby-string">'Kentucky'</span>, <span class="ruby-string">'KY'</span>],
+      [<span class="ruby-string">'Louisiana'</span>, <span class="ruby-string">'LA'</span>],
+      [<span class="ruby-string">'Maine'</span>, <span class="ruby-string">'ME'</span>],
+      [<span class="ruby-string">'Maryland'</span>, <span class="ruby-string">'MD'</span>],
+      [<span class="ruby-string">'Massachusetts'</span>, <span class="ruby-string">'MA'</span>],
+      [<span class="ruby-string">'Michigan'</span>, <span class="ruby-string">'MI'</span>],
+      [<span class="ruby-string">'Minnesota'</span>, <span class="ruby-string">'MN'</span>],
+      [<span class="ruby-string">'Mississippi'</span>, <span class="ruby-string">'MS'</span>],
+      [<span class="ruby-string">'Missouri'</span>, <span class="ruby-string">'MO'</span>],
+      [<span class="ruby-string">'Montana'</span>, <span class="ruby-string">'MT'</span>],
+      [<span class="ruby-string">'Nebraska'</span>, <span class="ruby-string">'NE'</span>],
+      [<span class="ruby-string">'Nevada'</span>, <span class="ruby-string">'NV'</span>],
+      [<span class="ruby-string">'New Hampshire'</span>, <span class="ruby-string">'NH'</span>],
+      [<span class="ruby-string">'New Jersey'</span>, <span class="ruby-string">'NJ'</span>],
+      [<span class="ruby-string">'New Mexico'</span>, <span class="ruby-string">'NM'</span>],
+      [<span class="ruby-string">'New York'</span>, <span class="ruby-string">'NY'</span>],
+      [<span class="ruby-string">'North Carolina'</span>, <span class="ruby-string">'NC'</span>],
+      [<span class="ruby-string">'North Dakota'</span>, <span class="ruby-string">'ND'</span>],
+      [<span class="ruby-string">'Ohio'</span>, <span class="ruby-string">'OH'</span>],
+      [<span class="ruby-string">'Oklahoma'</span>, <span class="ruby-string">'OK'</span>],
+      [<span class="ruby-string">'Oregon'</span>, <span class="ruby-string">'OR'</span>],
+      [<span class="ruby-string">'Pennsylvania'</span>, <span class="ruby-string">'PA'</span>],
+      [<span class="ruby-string">'Puerto Rico'</span>, <span class="ruby-string">'PR'</span>],
+      [<span class="ruby-string">'Rhode Island'</span>, <span class="ruby-string">'RI'</span>],
+      [<span class="ruby-string">'South Carolina'</span>, <span class="ruby-string">'SC'</span>],
+      [<span class="ruby-string">'South Dakota'</span>, <span class="ruby-string">'SD'</span>],
+      [<span class="ruby-string">'Tennessee'</span>, <span class="ruby-string">'TN'</span>],
+      [<span class="ruby-string">'Texas'</span>, <span class="ruby-string">'TX'</span>],
+      [<span class="ruby-string">'Utah'</span>, <span class="ruby-string">'UT'</span>],
+      [<span class="ruby-string">'Vermont'</span>, <span class="ruby-string">'VT'</span>],
+      [<span class="ruby-string">'Virginia'</span>, <span class="ruby-string">'VA'</span>],
+      [<span class="ruby-string">'Washington'</span>, <span class="ruby-string">'WA'</span>],
+      [<span class="ruby-string">'West Virginia'</span>, <span class="ruby-string">'WV'</span>],
+      [<span class="ruby-string">'Wisconsin'</span>, <span class="ruby-string">'WI'</span>],
+      [<span class="ruby-string">'Wyoming'</span>, <span class="ruby-string">'WY'</span>]
+  ]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- us_states-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- us_states-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

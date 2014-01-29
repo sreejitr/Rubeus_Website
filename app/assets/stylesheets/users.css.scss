@@ -1,0 +1,38 @@
+// Place all the styles related to the User profile here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile-box{
+  min-height: 220px;
+  border-style: solid;
+  border-color: #ffffff;
+  box-shadow: 9px 9px 20px #929292;
+  border-width: 3px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+}
+
+.thumbnail{
+  position:relative;
+  max-height: 150px;
+  min-height: 150px;
+  max-width: 150px;
+  min-width: 150px;
+  img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+  }
+  p{
+    min-width: 150px;
+    z-index:100;
+    position:absolute;
+    background: #333333;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    bottom: 0;
+  }
+}

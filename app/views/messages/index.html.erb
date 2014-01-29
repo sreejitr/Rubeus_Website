@@ -1,0 +1,34 @@
+<h1>Messages</h1>
+<div id="messages" class="tabbable tabs-left">
+<%if @users.blank?%>
+      <p><em>You have no messages.</em></p>
+ <%end%>
+  <ul class="nav nav-tabs">
+    <% @users.each do |p| %>
+    <li><a href="#<%=p%>" data-toggle="tab"><%=User.find(p).name%></a></li>
+    <% end %>
+  </ul>
+  <div class="tab-content">
+    <% @messages.each do |key, value| %>
+    <div class="tab-pane" id="<%= key %>">
+      <% value.each do |m| %>
+      <p><%= "#{User.find(m.sender_id).name} : #{m.body}"%></p>
+          <%end%>
+
+      <%= form_for :message, :url => {:action => 'create'}, :html => { :class => 'form-horizontal' } do |f| %>
+          <%= f.hidden_field :recipient_id, :value => key %>
+
+          <%= f.text_area :body,:class =>"rcontrols", :rows=> 2, :placeholder=> "Enter your text here", :id => "Body" %>
+
+          <div class="form-actions">
+            <%= f.submit "Reply", :class => 'btn btn-primary'%>
+          </div>
+      <% end %>
+    </div>
+    <%end%>
+  </div>
+</div>
+<script>
+  $('.tab-pane').first().addClass('active');
+  $('ul.nav.nav-tabs li').first().addClass('active');
+</script>

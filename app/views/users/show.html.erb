@@ -1,0 +1,64 @@
+<!-- Our custom profile page html -->
+<% user = @user %>
+
+<h1><%= @user.name %></h1>
+<div class="row">
+  <div class="span4">
+    <!-- User info -->
+    <div class="profile-box">
+        <h2><%= Rubeus::CONTACT %></h2>
+        <p><%= user.email %></p>
+        <p><%= user.phone_no %></p>
+    </div>
+  </div>
+  <div class="span4">
+    <!-- Location info -->
+    <div class="profile-box">
+        <h2><%= Rubeus::LOCATION %></h2>
+        <address>
+          <%= user.address %>
+          <br>
+          <%= "#{user.city}, #{user.state},#{user.zip_code}" %>
+          <br>
+        </address>
+      </div>
+   </div>
+  <div class="span4">
+    <div class="profile-box">
+    <!-- Google Maps -->
+    <iframe width="280" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?sll=40.44463930000007,-79.94465190000005&amp;sspn=0.012639063471303663,0.034332019924931075&amp;saddr=&amp;t=m&amp;daddr=Carnegie+Mellon+University,+5000+Forbes+Ave,+Pittsburgh,+PA+15213&amp;ie=UTF8&amp;ll=40.444639,-79.944652&amp;spn=0.012639,0.022144&amp;output=embed"></iframe><br /><small><a href="https://www.google.com/maps?sll=40.44463930000007,-79.94465190000005&amp;sspn=0.012639063471303663,0.034332019924931075&amp;saddr=&amp;t=m&amp;daddr=Carnegie+Mellon+University,+5000+Forbes+Ave,+Pittsburgh,+PA+15213&amp;ie=UTF8&amp;ll=40.444639,-79.944652&amp;spn=0.012639,0.022144&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+    </div>
+    </div>
+</div>
+<br />
+<div class="row">
+  <div class="span6">
+    <div class="profile-box" id="owned_product_list">
+      <h2><%=Rubeus::OWNED_PRODUCTS%></h2>
+      <% if @owned_products.empty? %>
+          <em><%= Rubeus::NO_OWNED_PRODUCTS %></em>
+      <% else %>
+          <ul class="thumbnails">
+          <% @owned_products.each do |product| %>
+              <li>
+              <%= render :partial => 'products/product_concise', :locals => {:product => product} %>
+              </li>
+          <% end %>
+          </ul>
+      <% end %>
+    </div>
+  </div>
+    <div class="span6">
+    <!-- Refactor this so that there's not an if-else in this view -->
+    <div class="profile-box" id="sold_product_list">
+      <h2><%= Rubeus::SOLD_PRODUCTS %></h2>
+      <% if @sold_products.empty?%>
+          <em><%= Rubeus::NO_SOLD_PRODUCTS%></em>
+      <% else %>
+          <% @sold_products.each do |product| %>
+              <%= render :partial => 'products/product_concise', :locals => {:product => product} %>
+          <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

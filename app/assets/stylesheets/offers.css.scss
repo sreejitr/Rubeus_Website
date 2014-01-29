@@ -1,0 +1,21 @@
+// Place all the styles related to the Offers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+.offers {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+
+.dl-horizontal dt{
+  font-size: 18px;
+}
+
+.dl-horizontal dd{
+  font-size: 18px;
+}

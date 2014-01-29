@@ -1,0 +1,19 @@
+<div class="well well-small">
+  <ul class="thumbnails">
+    <li class="span4">
+      <div class="thumbnail pull-left">
+        <img src="<%="#{product.photo_url(:thumb)}"%>" alt="">
+      </div>
+      <div class="caption">
+        <h4>
+          <%= link_to product.title, product_path(product)%>
+          <%= " - #{product.category} - #{product.condition}" %>
+        </h4>
+        <p><%= product.description %></p>
+      </div>
+      <div class="pull-right">
+        <h3><%= "$#{product.price}"%></h3>
+      </div>
+    </li>
+  </ul>
+</div>

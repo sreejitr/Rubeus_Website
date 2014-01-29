@@ -1,0 +1,88 @@
+<script>
+    $(document).ready(function(){
+        $('.carousel').carousel();
+    });
+</script>
+<h1>Welcome, <%=@name %></h1>
+
+<div class="hero-unit">
+  <div class="bg"></div>
+  <h1><strong>Rubeus: Simple Selling</strong></h1>
+  <h3><br/><strong>LOOKING FOR PRODUCTS FOR YOUR ROOM? </strong>
+    <%= link_to ('BROWSE OUR PRODUCT LISTINGS!'), products_path, :method => 'get', :class => 'btn btn-primary btn-medium'%>
+    <br /><br/><strong>   WANT TO SELL SOMETHING TO FELLOW STUDENTS? </strong>
+    <%= link_to ('SELL IT NOW!'), new_product_path, :method => 'get', :class => 'btn btn-primary btn-medium'%> </h3>
+</div>
+
+<!--  Carousel - consult the Twitter Bootstrap docs at
+      http://twitter.github.com/bootstrap/javascript.html#carousel -->
+<div id="home-carousel" class="carousel slide"><!-- class of slide for animation -->
+  <div class="carousel-inner">
+    <% if !@carousel_products.empty? %>
+        <%cp =  @carousel_products.fetch(0)%>
+        <div class="active item">
+          <img src="<%=cp.photo_url(:carousel)%>" alt="A new product" />
+          <!-- use cp.photo_url instead of placeholder once ImageMagick is fully functional -->
+          <div class="carousel-caption">
+            <p><%= link_to ("#{cp.title} selling for #{number_to_currency(cp.price)}"),
+                           product_path(cp), :method => 'get' %></p>
+          </div>
+        </div>
+        <%if @carousel_products.count >= 2%>
+            <%cp =  @carousel_products.fetch(1)%>
+            <div class="item">
+              <img src="<%=cp.photo_url(:carousel)%>" alt="A new product" />
+              <!-- use cp.photo_url instead of placeholder once ImageMagick is fully functional -->
+              <div class="carousel-caption">
+                <p><%= link_to ("#{cp.title} selling for #{number_to_currency(cp.price)}"),
+                               product_path(cp), :method => 'get' %></p>
+              </div>
+            </div>
+        <%end%>
+        <%if @carousel_products.count >= 3%>
+            <%cp =  @carousel_products.fetch(2)%>
+            <div class="item">
+              <img src="<%=cp.photo_url(:carousel)%>" alt="A new product" />
+              <!-- use cp.photo_url instead of placeholder once ImageMagick is fully functional -->
+              <div class="carousel-caption">
+                <p><%= link_to ("#{cp.title} selling for #{number_to_currency(cp.price)}"),
+                               product_path(cp), :method => 'get' %></p>
+              </div>
+            </div>
+        <%end%>
+        <%if @carousel_products.count >= 4%>
+            <%cp =  @carousel_products.fetch(3)%>
+            <div class="item">
+              <img src="<%=cp.photo_url(:carousel)%>" alt="A new product" />
+              <!-- use cp.photo_url instead of placeholder once ImageMagick is fully functional -->
+              <div class="carousel-caption">
+                <p><%= link_to ("#{cp.title} selling for #{number_to_currency(cp.price)}"),
+                               product_path(cp), :method => 'get' %></p>
+              </div>
+            </div>
+        <%end%>
+        <%if @carousel_products.count >= 5%>
+            <%cp =  @carousel_products.fetch(4)%>
+            <div class="item">
+              <img src="<%=cp.photo_url(:carousel)%>" alt="A new product" />
+              <!-- use cp.photo_url instead of placeholder once ImageMagick is fully functional -->
+              <div class="carousel-caption">
+                <p><%= link_to ("#{cp.title} selling for #{number_to_currency(cp.price)}"),
+                               product_path(cp), :method => 'get' %></p>
+              </div>
+            </div>
+        <%end%>
+    <%else%>
+        <div class="item active"><!-- class of active since it's the first item -->
+          <img src="http://placehold.it/500x500" alt="" />
+          <div class="carousel-caption">
+            <p>Product Title and Price</p>
+          </div>
+        </div>
+    <%end%>
+  </div><!-- /.carousel-inner -->
+  <!--  Next and Previous controls below
+        href values must reference the id for this carousel -->
+  <a class="carousel-control left" href="#home-carousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#home-carousel" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->

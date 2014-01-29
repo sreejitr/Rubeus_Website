@@ -1,0 +1,25 @@
+<%- model_class = Product -%>
+
+<div class="page-header">
+  <% if @search_param.blank?%>
+    <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <% else %>
+    <h3><%="Search Results for #{@search_param}"%></h3>
+  <% end %>
+</div>
+
+<div class ="span2 pull-left" data-spy="affix" data-offset-top="200">
+  <% categories.each do |c| %>
+  <p><%= link_to c, search_path(:q => c) %></p>
+<% end %>
+</div>
+
+<div class ="span9 pull-right">
+  <% if @products.empty? %>
+     <span class="display_font">
+        No products found
+     </span>
+  <% else %>
+    <%= render @products, :user_id => @user_id%>
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+<table cellpadding="10" cellspacing="10">
+        <tr>
+                <th>Del?</th>
+                <th>Date</th>
+                <th>Recipient</th>
+                <th>Subject</th>
+        </tr>
+                <% messages_sent.each do |message| %>
+                        <tr>
+                          <td><%= check_box_tag "delete[]", message.id %></td>
+              <td><%= message.created_at%></td>
+              <td><%= link_to h(User.find(message.sender_id).email), user_path(message.sender_id) %></td>
+              <td><%= link_to h(message.subject), user_message_path(@user_id, message) %></td>
+                        </tr>
+                <%# end %>
+                <tr>
+                        <td colspan="4">
+                                <%= submit_tag "Delete" %>
+                        </td>
+                </tr>
+         <% end %>
+</table>
+<%= link_to "Inbox", user_messages_path(@user_id)%>

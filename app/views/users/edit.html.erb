@@ -1,0 +1,62 @@
+<h1><%= Rubeus::EDIT_PROFILE_INFO %></h1>
+<% user = @user %>
+<%= form_for user, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+    <% if user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+            <% user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+      <br/>
+      <div class="control-group">
+        <%= f.label Rubeus::NAME, :class => 'control-label' %>
+        <div class="controls">
+            <%= f.text_field :name, :autofocus => true %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :phone_no, :class => 'control-label' %>
+        <div class="controls">
+            <%= f.text_field :phone_no %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :address, :class => 'control-label' %>
+        <div class="controls">
+            <%= f.text_field :address %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :city, :class => 'control-label' %>
+        <div class="controls">
+            <%= f.text_field :city %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :state, :class => 'control-label' %>
+        <div class="controls">
+            <%= f.select :state, us_states %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :zip_code, :class => 'control-label' %>
+        <div class="controls">
+            <%= f.text_field :zip_code %>
+        </div>
+      </div>
+      <div class="form-actions">
+      <%= f.submit "Save changes", class: "btn"" btn-medium btn-primary"%>
+      <%= link_to Rubeus::DISCARD_CHANGES, edit_user_path(user), :class => 'btn' %> |
+      <%= link_to Rubeus::BACK, user_path(user), :class => 'btn' %>
+      </div>
+<% end %>

@@ -1,0 +1,18 @@
+Sun, 01 Dec 2013 05:52:02 -0500
+doc/README_FOR_APP	Sun, 01 Dec 2013 04:58:20 -0500
+app/controllers/application_controller.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/controllers/home_controller.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/controllers/messages_controller.rb	Sun, 01 Dec 2013 05:15:34 -0500
+app/controllers/offers_controller.rb	Sun, 01 Dec 2013 05:17:02 -0500
+app/controllers/products_controller.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/controllers/static_pages_controller.rb	Sun, 01 Dec 2013 05:11:37 -0500
+app/controllers/users_controller.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/helpers/application_helper.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/helpers/home_helper.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/helpers/offers_helper.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/helpers/products_helper.rb	Sun, 01 Dec 2013 05:51:40 -0500
+app/models/message.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/models/offer.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/models/product.rb	Sun, 01 Dec 2013 05:11:37 -0500
+app/models/user.rb	Sun, 01 Dec 2013 04:58:20 -0500
+app/uploaders/product_image_uploader.rb	Sun, 01 Dec 2013 04:58:20 -0500

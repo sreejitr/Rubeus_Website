@@ -1,0 +1,38 @@
+<table cellpadding="10" cellspacing="10">
+	<tr>
+		<th>Del?</th>
+		<th>Date</th>
+		<th>From</th>
+		<th>Subject</th>
+        <th></th>
+
+    </tr>
+	<% if messages_inbox.count == 0 %>
+		<tr>
+			<td colspan="4">
+				No messages
+			</td>
+		</tr>
+	<% else %>
+
+        <% for message in messages_inbox %>
+          <tr>
+            <div class="messages">
+				<td><%= check_box_tag "delete[]", message.id %></td>
+                <td><%= message.created_at%></td>
+                <td><%= link_to h(User.find(message.sender_id).email), user_path(message.sender_id) %></td>
+				<td><%= link_to h(message.subject), user_message_path(@user_id, message) %></td>
+                <td><%= link_to t(Rubeus::REPLY),
+                          new_user_message_path(:recipient_id => message.sender_id), :method => 'get', :class => 'btn btn-primary btn-mini' %></td>
+          </div>
+          </tr>
+		<% end %>
+		<tr>
+			<td colspan="4">
+				<%= submit_tag "Delete" %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+<%= link_to "Sent", user_messages_path(@user_id, :mailbox => :sent)%> |
+<%= link_to "Compose", new_user_message_path(@user_id)%>

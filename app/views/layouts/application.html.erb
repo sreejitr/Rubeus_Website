@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rubeus</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "application" %>
+  <%= render 'layouts/shim' %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+<%= render '/layouts/header', :search_param => @search_param %>
+<div class ="container">
+    <%= render '/layouts/alert_and_notice' %>
+    <%= yield %>
+</div>
+<%= render '/layouts/footer' %>
+</body>
+</html>
